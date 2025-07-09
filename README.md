@@ -129,4 +129,27 @@ void loop()
 {
     // nothing here
 }
+```
+
+###  Quick Note: PS3 Controller Wireless Setup for Gaming on Linux
+1. Connect the controller via USB and run:
+   ```bash
+   sudo sixpair
+   ```
+
+2. Edit the Bluetooth input config:
+   ```bash
+   sudo nano /etc/bluetooth/input.conf
+   ```
+   Set:
+   ```ini
+   ClassicBondedOnly=false
+   ```
+
+3. Restart Bluetooth:
+   ```bash
+   sudo systemctl restart bluetooth
+   ```
+
+> Requires BlueZ and Sixpair to be installed
 
